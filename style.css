@@ -1,0 +1,95 @@
+body {
+  background: black;
+  color: white;
+  margin: 0;
+  -webkit-user-drag: none;
+  user-select: none;
+  overflow-y: scroll;
+}
+
+:root {
+  --crosshair-2px-mask: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAABLSURBVEhL7dU7DgAgCERB9P539pNsbdBiY/RNAzRsQ0KcaqJxW1W1I9iGYJv/gvG+kv0wZVC7lN3HVeM+83onjdv4TjYE2xBsEtEBIjsYFB3UfaEAAAAASUVORK5CYII=');
+
+  --crosshair-1px-mask: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAABFSURBVEhL7dUxCgAgDATBxP//WVOkDkrgBN1pTLeNcNYxQ57HRr5yhGUIy/wXxvt8d2E85FnqLBZwX+cHs04yhGUIi5gtjYMQGuzgsbEAAAAASUVORK5CYII=');
+}
+
+
+img {
+  display: block;
+  -webkit-user-drag: none;
+  user-select: none;
+  text-decoration: none;
+  width: 50%;
+  object-fit: scale-down;
+
+  cursor: none;
+}
+
+button {
+  color: rgb(127, 255, 255);
+  font-size: 1em;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+button:hover {
+  color: white;
+}
+
+button:active {
+  color: rgb(127, 255, 255);
+}
+
+#crosshair {
+  position: fixed;
+  background-color: rgba(255, 200, 0, 1);
+  width: 30px;
+  height: 30px;
+  cursor: none;
+
+  -webkit-mask-image: var(--crosshair-2px-mask);
+  mask-image: var(--crosshair-2px-mask);
+}
+
+#screenshotsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#toolbox {
+  position: fixed;
+  width: 100%;
+
+  padding: 4px 0px;
+
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+
+
+#SDBtnA,
+#SDBtnB {
+  border-bottom: none;
+}
+
+#exportBtnA,
+#exportBtnB {
+  width: 100px;
+  border-image-slice: 1;
+}
+
+
+#exportBtnA {
+  border-image-source: linear-gradient(to right, aqua, transparent);
+}
+
+#exportBtnB {
+  border-image-source: linear-gradient(to left, aqua, transparent);
+}
